@@ -1,9 +1,9 @@
-X-TERMINATOR is a simple, fast, and addictively fun java 2D game.
+X-TERMINATOR is a simple, fast-paced, and addictively fun 2D Java game.
 
-Made for a game jam as a part of selection process for intership.
+It was created in just one week for a game jam, as part of an internship selection process. The theme of the jam was "3 Rules".
 
-My first game ever, made in a week.
+This is my first-ever game, and I'm excited to share it!
 
-As it is currently under review process, I am not allowed to refine it, so it will have to wait untill the review process is finished.
+Please note that it's currently under review, so I’m unable to make any updates or improvements until the review process is complete.
 
-HOPE U ENJOY IT
+Hope you enjoy playing it!
