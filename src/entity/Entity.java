@@ -19,29 +19,26 @@ public abstract class Entity {
 
     GamePanel gamePanel;
     public double x, y; //coordinates
-    double dx, dy; // velocity
+    public double dx, dy; // velocity
     public double acceleration;
 
     public BufferedImage image;
-    
+    public Rectangle solidArea;
     public int width, height;
     
     public Direction direction;
     int frameCounter ;
+     
+  
     
-    public Rectangle solidArea;
-
-
-    
-    
-    public Entity(GamePanel gamePanel) {
-        
+    public Entity(GamePanel gamePanel) {      
         this.gamePanel = gamePanel;
     }
     
-    public abstract void gettDefaultValues();
+    public abstract void getDefaultValues();
     public abstract void update();
-    public  void draw(Graphics2D graphics2D ){
+    
+    public void draw(Graphics2D graphics2D ){
          graphics2D.drawImage(image, (int) x, (int) y, width, height, null);
     }
     

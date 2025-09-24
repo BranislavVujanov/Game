@@ -23,6 +23,7 @@ public class Sound {
         soundURL[1] = getClass().getResource("/sound/EndEffect.wav");
         soundURL[2] = getClass().getResource("/sound/CollisionEffect.wav");
         soundURL[3] = getClass().getResource("/sound/WinEffect.wav");
+        soundURL[4] = getClass().getResource("/sound/LightningEffect.wav");
     }
     
     public void setFile(int i){
@@ -45,5 +46,22 @@ public class Sound {
     
     public void stop(){
         clip.stop();
+    }
+
+      
+
+    public void playMusic(int i){
+        setFile(i);
+        play();
+        loop();
+    }
+
+    public void stopMusic(){
+        stop();
+    }
+    
+    public void playSoundEffect(int i){
+        setFile(i);
+        play();
     }
 }

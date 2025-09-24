@@ -18,18 +18,17 @@ import main.GamePanel;
  */
 public final class Npc extends Entity {
     
-   
-
+ 
     public Npc(GamePanel gamePanel) {
         super(gamePanel);
-        gettDefaultValues();
-        getImage("/npc/X.png");
+        getDefaultValues();
+        getImage("/image/X.png");
     }
 
     @Override
-    public void gettDefaultValues() {
+    public void getDefaultValues() {
         acceleration = 1.2;
-        //set player's size
+        //player's size
         width = gamePanel.tileSize / 2;
         height = gamePanel.tileSize / 2;
         solidArea = new Rectangle((int) x, (int) y, width, height);

@@ -19,7 +19,8 @@ public class Keybord implements KeyListener{
     public boolean rightPressed;
     GamePanel gamePanel;
 
-    public Keybord(GamePanel gamePanel) {
+
+    public Keybord(GamePanel gamePanel) {   
         this.gamePanel = gamePanel;
     }
     
@@ -31,25 +32,26 @@ public class Keybord implements KeyListener{
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
         
-        if (gamePanel.gameState == gamePanel.initialState || gamePanel.gameState == gamePanel.lossState || gamePanel.gameState == gamePanel.winState){
+        if (gamePanel.gameState == gamePanel.initialState || gamePanel.gameState == gamePanel.lossState 
+                                                          || gamePanel.gameState == gamePanel.winState){
             switch (code) {
             case KeyEvent.VK_UP:
-                gamePanel.commandNumber--;
-                if (gamePanel.commandNumber < 0) gamePanel.commandNumber = 1;
+                gamePanel.ui.commandNumber--;
+                if (gamePanel.ui.commandNumber < 0) gamePanel.ui.commandNumber = 1;
                 break;
             case KeyEvent.VK_DOWN:
-                gamePanel.commandNumber++;
-                if (gamePanel.commandNumber > 1) gamePanel.commandNumber = 0;
+                gamePanel.ui.commandNumber++;
+                if (gamePanel.ui.commandNumber > 1) gamePanel.ui.commandNumber = 0;
                 break;
             case KeyEvent.VK_ENTER:
-                if (gamePanel.commandNumber == 0) gamePanel.gameState = gamePanel.playState;
-                if (gamePanel.commandNumber == 1) System.exit(0);
-                            
+                if (gamePanel.ui.commandNumber == 0) gamePanel.gameState = gamePanel.level1State;
+                if (gamePanel.ui.commandNumber == 1) System.exit(0);          
                 break;
             }
         }
         
-        if (gamePanel.gameState == gamePanel.playState){
+        if (gamePanel.gameState == gamePanel.level1State || gamePanel.gameState == gamePanel.level2State
+                                                         || gamePanel.gameState == gamePanel.level3State){
             switch (code) {
             case KeyEvent.VK_UP:
                 upPressed = true;
