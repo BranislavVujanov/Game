@@ -97,7 +97,7 @@ public final class Player extends Entity {
             y += dy;
         }
 
-        //to allow player to speed up at a rate every 0.5 sec
+        //allow player to speed up at a steady rate 
         frameCounter++;
         if (frameCounter == 30) {
             frameCounter = 0; 

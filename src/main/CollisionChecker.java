@@ -38,7 +38,10 @@ public class CollisionChecker {
         if (collisionCounter == 3) {
             gamePanel.soundEffect.playSoundEffect(3);
             gamePanel.ui.frameCounter = 0;
-            if (gamePanel.gameState == gamePanel.level3State) gamePanel.gameState = gamePanel.winState;
+            if (gamePanel.gameState == gamePanel.level3State) {
+                gamePanel.gameState = gamePanel.winState;
+                gamePanel.previousGameState = gamePanel.level1State;
+            }
             else gamePanel.gameState = gamePanel.intermediateState;
             return;
         }
