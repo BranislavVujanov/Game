@@ -20,6 +20,7 @@ public final class Player extends Entity {
     double maxSpeed;
     double friction;
     double mass;
+    int frameCounter = 0;
     
 
     public Player(GamePanel gamePanel, Keybord keybord) {
@@ -38,7 +39,7 @@ public final class Player extends Entity {
         y = 1* gamePanel.tileSize;
         dx = 0;  // velocity
         dy = 0; // velocity
-        power = 0.06;
+        power = 0.058;
         mass = 0.047 ; // value less than power value
         //Initial acceleration
         acceleration =  power - mass ;
@@ -99,7 +100,7 @@ public final class Player extends Entity {
 
         //allow player to speed up at a steady rate 
         frameCounter++;
-        if (frameCounter == 30) {
+        if (frameCounter == 50) {
             frameCounter = 0; 
             acceleration = (power + (power* 0.022)) - mass;
         }

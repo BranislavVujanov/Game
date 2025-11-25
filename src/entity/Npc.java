@@ -18,6 +18,9 @@ import main.GamePanel;
  */
 public final class Npc extends Entity {
     
+    
+    int frameCounter = 0;
+    
  
     public Npc(GamePanel gamePanel) {
         super(gamePanel);
@@ -27,7 +30,7 @@ public final class Npc extends Entity {
 
     @Override
     public void getDefaultValues() {
-        acceleration = 1.2;
+        acceleration = 0.75;
         //player's size
         width = gamePanel.tileSize / 2;
         height = gamePanel.tileSize / 2;
@@ -39,7 +42,7 @@ public final class Npc extends Entity {
     public void update() {
         
         frameCounter++;
-        if (frameCounter == 80) {
+        if (frameCounter == 80) {  //allows for NPC to change direction every 80 frames at random
             frameCounter = 0;
             Random random = new Random();
             int i = random.nextInt(1, 101); //random number 1-100

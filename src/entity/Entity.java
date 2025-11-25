@@ -27,7 +27,7 @@ public abstract class Entity {
     public int width, height;
     
     public Direction direction;
-    int frameCounter ;
+//    int frameCounter ;
      
   
     
