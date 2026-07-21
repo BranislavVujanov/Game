@@ -49,7 +49,7 @@ public final class Npc extends Entity {
             if (i <= 25) direction = Direction.DOWN;
             if (i > 25 && i <= 50) direction = Direction.UP;
             if (i > 50 && i <= 75) direction = Direction.RIGHT;
-            if (i > 75 && i <= 100) direction = Direction.UP;
+            if (i > 75 && i <= 100) direction = Direction.LEFT;
         }
 
         if (direction != null){

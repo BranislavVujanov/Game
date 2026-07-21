@@ -145,7 +145,7 @@ public class GamePanel extends JPanel implements Runnable {
                 ui.drawEntities(graphics2D);
                 break;
             case winState:
-                ui.drawWinScreedImage(graphics2D);
+                ui.drawWinScreenImage(graphics2D);
                 break;
             case lossState:
                 ui.drawLossScreenImage(graphics2D);

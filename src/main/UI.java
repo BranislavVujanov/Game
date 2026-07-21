@@ -25,7 +25,7 @@ public class UI {
     public Font font, bigFont, biggerFont;
     String message;
     boolean messageOn = false;
-    int messageCouner;
+    int messageCounter;
     double time = 10;
     DecimalFormat df = new DecimalFormat("#0.00");
     int frameCounter = 0;
@@ -85,9 +85,9 @@ public class UI {
         //message
         if (messageOn){
             graphics2D.drawString(message, 226, 270);
-            messageCouner++;
-            if (messageCouner >= 90){
-                messageCouner = 0;
+            messageCounter++;
+            if (messageCounter >= 90){
+                messageCounter = 0;
                 messageOn = false;
             }
         }
@@ -175,7 +175,7 @@ public class UI {
          drawMenuItems(graphics2D);
     }
     
-    public void drawWinScreedImage (Graphics2D graphics2D){
+    public void drawWinScreenImage (Graphics2D graphics2D){
         try {
                 resetValues();
                 image = ImageIO.read(getClass().getResourceAsStream("/image/ScreenPicture.png"));
